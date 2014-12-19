@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @lister.user_id %>
+</p>
+
+<p>
+  <strong>Movie:</strong>
+  <%= @lister.movie_id %>
+</p>
+
+<p>
+  <strong>Vu:</strong>
+  <%= @lister.vu %>
+</p>
+
+<%= link_to 'Edit', edit_lister_path(@lister) %> |
+<%= link_to 'Back', listers_path %>

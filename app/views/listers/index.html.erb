@@ -1,0 +1,29 @@
+<h1>Listing listers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>Movie</th>
+      <th>Vu</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @listers.each do |lister| %>
+      <tr>
+        <td><%= lister.user_id %></td>
+        <td><%= lister.movie_id %></td>
+        <td><%= lister.vu %></td>
+        <td><%= link_to 'Show', lister %></td>
+        <td><%= link_to 'Edit', edit_lister_path(lister) %></td>
+        <td><%= link_to 'Destroy', lister, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Lister', new_lister_path %>
