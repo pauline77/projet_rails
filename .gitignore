@@ -6,5 +6,5 @@ log/*.log
 doc/
 *.swp
 *~
-.DS_STORE
+.DS_Store
 /config/database.yml
